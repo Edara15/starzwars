@@ -1,10 +1,8 @@
-# Getting Started with Create React App
+# Install React app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### `npm install`
 
 ## Available Scripts
-
-In the project directory, you can run:
 
 ### `npm start`
 
@@ -45,26 +43,14 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
 ### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### project explanation
+
+1. index.js file uses the store to be prodvided in the App component and app is inject in "root" div
+2. store.js file imports the reducer file, and create a store with rootrducer
+3. reducer.js file has initial state variables with empty values - characters, films and loadingFilms,
+4. in App.js file - has a dropdown which load the character names comng from api call
+5. http-common.js file has helper axios function to be commonly used everywhere for api call
+6. action.js file has retrieveCharacters function which calls requests.js file getAll and retrives the response to be dispatched to reducer file.
+7. All the components will now be able to get the data using useSelector and can make api call using useDispatcher and functionname from action file.
